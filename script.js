@@ -54,14 +54,21 @@ function nextStep(){
 
   if(steps[current]){
     steps[current].classList.add("active");
+
+    // 🌹 If this is the LAST step, trigger big rose
+    if(current === steps.length - 1){
+      setTimeout(showFinalRose, 5000);
+    }
+
     setTimeout(nextStep,5000);
-  } else {
-    // 🌹 SHOW FINAL BIG ROSE
-    setTimeout(()=>{
-      const bigRose = document.getElementById("final-rose");
-      if(bigRose) bigRose.classList.add("show");
-    }, 1000);
   }
+}
+
+function showFinalRose(){
+  const bigRose = document.getElementById("final-rose");
+  if(!bigRose) return;
+
+  bigRose.classList.add("show");
 }
 
 document.querySelectorAll(".card").forEach(card=>{
