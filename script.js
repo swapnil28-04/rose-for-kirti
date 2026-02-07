@@ -6,8 +6,13 @@ const steps = [...document.querySelectorAll(".step")];
 const herName = "KIRTI";
 const yourName = "SWAPNIL";
 
-document.getElementById("her-name").textContent = herName;
-document.getElementById("your-name").textContent = yourName;
+document.addEventListener("DOMContentLoaded", () => {
+  const herEl = document.getElementById("her-name");
+  const yourEl = document.getElementById("your-name");
+
+  if (herEl) herEl.textContent = herName;
+  if (yourEl) yourEl.textContent = yourName;
+});
 
 const music = document.getElementById("music");
 const heartbeat = document.getElementById("heartbeat");
