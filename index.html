@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Rose Day 🌹</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio id="music" loop src="Stephen_Sanchez_Em_Beihold_-_Heaven_when_I_held_you_again_Until_I_Found_You_.mp3"></audio>
+
+<!-- 💓 Heartbeat Sound -->
+<audio id="heartbeat" src="heartbeat.mp3" preload="auto"></audio>
+
+<!-- 🌹 INTRO -->
+<section id="screen-intro" class="screen">
+  <div class="card tilt">
+    <h1>Happy Rose Day 🌹</h1>
+    <p class="subtitle">A small surprise, straight from my heart</p>
+    <div class="beat">💓</div>
+    <button id="start-btn">Tap to receive your rose</button>
+  </div>
+</section>
+
+<!-- 🌹 MAIN -->
+<section id="screen-main" class="screen hidden">
+
+  <!-- STEP 1 -->
+  <div class="card step active tilt">
+    <h1>The First Rose</h1>
+    <p id="text-intro">
+      Dear <span id="her-name" class="name-glow">Kirti</span> 💌
+    </p>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="card step tilt">
+    <h1>The Memories</h1>
+
+    <div class="heart">
+      <img src="img1.jpg" alt="Memory 1">
+      <img src="img2.jpg" alt="Memory 2">
+      <img src="img3.jpg" alt="Memory 3">
+      <img src="img4.jpg" alt="Memory 4">
+    </div>
+
+    <p class="tap-hint">Tap the card 💖</p>
+    <p id="hidden-message" class="hidden-text">
+      Every picture here holds a heartbeat.
+    </p>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="card step tilt">
+    <h1>The Feeling</h1>
+    <p>
+      Some people change your life without trying.<br>
+      You walked in quietly, and suddenly everything made sense.
+    </p>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="card step tilt">
+    <h1>The Promise</h1>
+    <p>
+      I don’t promise perfection,<br>
+      but I promise honesty, care,<br>
+      and a heart that chooses you — every day.
+    </p>
+
+    <p class="final-line">
+      Happy Rose Day 🌹<br>
+      — <span id="your-name">Swapnil</span>
+    </p>
+
+    <p class="tap-hint">Tap once more ✨</p>
+    <p id="final-hidden" class="hidden-text">
+      If love had a shape, it would look a lot like us 💖
+    </p>
+  </div>
+
+</section>
+
+<!-- 🌸 EFFECT LAYERS -->
+<div id="petal-layer"></div>
+<div id="confetti-layer"></div>
+<div id="sparkle-layer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
