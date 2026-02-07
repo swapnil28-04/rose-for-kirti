@@ -3,8 +3,8 @@ const main = document.getElementById("screen-main");
 const startBtn = document.getElementById("start-btn");
 const steps = [...document.querySelectorAll(".step")];
 
-const herName = "HER_NAME";
-const yourName = "YOUR_NAME";
+const herName = "KIRTI";
+const yourName = "SWAPNIL";
 
 document.getElementById("her-name").textContent = herName;
 document.getElementById("your-name").textContent = yourName;
