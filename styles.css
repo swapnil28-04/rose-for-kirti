@@ -175,7 +175,7 @@ button{
 .rose{
   position:fixed;
 
-  /* 🌹 FINAL BIG ROSE POP */
+/* 🌹 FINAL BIG ROSE POP */
 #final-rose{
   position:fixed;
   inset:0;
@@ -194,9 +194,4 @@ button{
 #final-rose.show{
   opacity:1;
   transform:scale(1);
-}
-
-  bottom:-50px;
-  animation:rise linear infinite;
-  pointer-events:none;
 }
