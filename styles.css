@@ -1,0 +1,180 @@
+:root{
+  --pink:#ff4d6d;
+  --rose:#ff758f;
+  --gold:#ffd6a5;
+  --bg1:#3b0010;
+  --bg2:#7a001f;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Nunito',sans-serif;
+  min-height:100vh;
+  background:radial-gradient(circle at top,var(--bg2),var(--bg1));
+  color:#fff;
+  overflow:hidden;
+}
+
+.screen{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  transition:opacity 1s ease, transform 1s ease;
+}
+
+.hidden{
+  opacity:0;
+  pointer-events:none;
+  transform:scale(1.05);
+}
+
+.card{
+  width:100%;
+  max-width:440px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(18px);
+  border-radius:32px;
+  padding:30px 24px;
+  text-align:center;
+  box-shadow:0 40px 80px rgba(0,0,0,.45);
+  transition:transform .2s ease;
+}
+
+h1{
+  font-family:'Pacifico',cursive;
+  font-size:2.2rem;
+  margin-bottom:14px;
+}
+
+.subtitle{opacity:.85}
+
+button{
+  margin-top:24px;
+  padding:14px 32px;
+  border-radius:999px;
+  border:none;
+  background:linear-gradient(135deg,var(--pink),var(--rose));
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.beat{
+  font-size:1.8rem;
+  margin-top:10px;
+  animation:beat 1.4s infinite;
+}
+@keyframes beat{
+  50%{transform:scale(1.15)}
+}
+
+.step{display:none}
+.step.active{display:block}
+
+/* 💖 EXTRA-LARGE HEART IMAGE LAYOUT */
+.heart{
+  position:relative;
+  width:360px;
+  height:330px;
+  margin:26px auto 30px;
+}
+
+.heart img{
+  position:absolute;
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:26px;
+  background:#fff;
+  padding:7px;
+  box-shadow:0 20px 45px rgba(0,0,0,.5);
+  transition:transform .3s ease;
+}
+
+/* Heart / diamond positioning */
+.heart img:nth-child(1){
+  top:0;
+  left:110px;
+}
+.heart img:nth-child(2){
+  top:85px;
+  left:220px;
+}
+.heart img:nth-child(3){
+  top:170px;
+  left:110px;
+}
+.heart img:nth-child(4){
+  top:85px;
+  left:0;
+}
+
+/* Desktop hover lift */
+@media (hover:hover){
+  .heart img:hover{
+    transform:translateY(-8px) scale(1.05);
+  }
+}
+@media (max-width:480px){
+  .heart{
+    transform:scale(.82);
+  }
+}
+
+
+
+.name-glow{
+  color:#ffd6a5;
+  text-shadow:0 0 8px rgba(255,214,165,.8);
+}
+
+.tap-hint{
+  font-size:.85rem;
+  opacity:.7;
+  margin-top:10px;
+}
+
+.hidden-text{
+  opacity:0;
+  margin-top:12px;
+  transition:opacity .6s ease;
+}
+
+.hidden-text.show{
+  opacity:1;
+}
+
+/* 🌸 PETALS */
+.petal{
+  position:fixed;
+  bottom:-40px;
+  animation:rise linear infinite;
+}
+@keyframes rise{
+  to{transform:translateY(-120vh) rotate(360deg);opacity:0}
+}
+
+/* ✨ SPARKLE */
+.sparkle{
+  position:fixed;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--gold),transparent);
+  pointer-events:none;
+  animation:spark 1s forwards;
+}
+@keyframes spark{
+  to{transform:translateY(-18px) scale(0);opacity:0}
+}
+/* 🌹 ROSES */
+.rose{
+  position:fixed;
+  bottom:-50px;
+  animation:rise linear infinite;
+  pointer-events:none;
+}
