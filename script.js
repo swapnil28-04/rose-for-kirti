@@ -51,9 +51,16 @@ function startSteps(){
 function nextStep(){
   steps[current].classList.remove("active");
   current++;
+
   if(steps[current]){
     steps[current].classList.add("active");
     setTimeout(nextStep,5000);
+  } else {
+    // 🌹 SHOW FINAL BIG ROSE
+    setTimeout(()=>{
+      const bigRose = document.getElementById("final-rose");
+      if(bigRose) bigRose.classList.add("show");
+    }, 1000);
   }
 }
 
